@@ -1,0 +1,17 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Input and output folders
+backend/input/
+backend/output/
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# IDE
+.idea/
+.vscode/

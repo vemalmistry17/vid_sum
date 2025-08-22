@@ -1,0 +1,20 @@
+version: '3.3'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/input:/app/input
+      - shared-data:/app/output
+  frontend:
+    build: ./frontend
+    ports:
+      - "8501:8501"
+    volumes:
+      - shared-data:/app/output
+    depends_on:
+      - backend
+volumes:
+  shared-data:
